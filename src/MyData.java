@@ -13,13 +13,20 @@ public class MyData {
 		try {
 			listOfWords = Files.readAllLines(Paths.get("c:/temp/russian_nouns.txt"));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+	
 	public static String getRandomWord() {
-		Random rn = new Random();
-		return listOfWords.get(Math.abs(rn.nextInt()) % listOfWords.size());
+		String result = "";
+		try {
+			Random rn = new Random();
+			result = listOfWords.get(Math.abs(rn.nextInt()) % listOfWords.size());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+						
 	}
 	
 	

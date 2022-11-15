@@ -34,11 +34,11 @@ public class Hangman {
         		
         		if (choice.equalsIgnoreCase("и")) {
         			game.startNewGame();
-        			while(!game.EndOfGame()) {
+        			while(!game.endOfGame()) {
         				game.currentStatus();
         				System.out.print("”гадай букву: ");
         				choice = br.readLine();
-        				game.GuessLetter(choice);
+        				game.guessLetter(choice);
         			}
         		}
         		

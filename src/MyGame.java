@@ -1,7 +1,8 @@
 
 public class MyGame {
+	
 	private int count = 0;
-	private int maxTries;
+	private int maxTries = 10;
 
 	
 	public MyGame(int limit) {
@@ -33,16 +34,16 @@ public class MyGame {
 	
 	public void currentStatus() {
 		System.out.println("Слово: " + maskedWord + 
-				" Осталось попыток: " + Integer.toString(maxTries-count) + 
+				" Осталось попыток: " + Integer.toString(maxTries - count) + 
 				" Использованные буквы: " + getUsedLetters());
 	}
 	
-	public boolean EndOfGame() {
+	public boolean endOfGame() {
 		return (count == maxTries || maskedWord.equalsIgnoreCase(currentWord));
 	}
 	
 	
-	public void GuessLetter(String s) {
+	public void guessLetter(String s) {
 		usedLetters = usedLetters + s;
 		if (currentWord.contains(s)) {
 			System.out.println("Есть такая буква!");
