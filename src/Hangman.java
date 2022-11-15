@@ -15,7 +15,7 @@ public class Hangman {
 
 	public static void main(String[] args) {
 
-		System.out.println("Виселица!");
+		System.out.println("Р’РёСЃРµР»РёС†Р°!");
 		
         String choice="";
 
@@ -28,15 +28,15 @@ public class Hangman {
         	
         	MyGame game = new MyGame();
         	
-        	while(!choice.equalsIgnoreCase("в")) {
-        		System.out.print("(и) - Играть, (в) - Выход: ");
+        	while(!choice.equalsIgnoreCase("РІ")) {
+        		System.out.print("(Рё) - РРіСЂР°С‚СЊ, (РІ) - Р’С‹С…РѕРґ: ");
         		choice = br.readLine();
         		
-        		if (choice.equalsIgnoreCase("и")) {
+        		if (choice.equalsIgnoreCase("Рё")) {
         			game.startNewGame();
         			while(!game.endOfGame()) {
         				game.currentStatus();
-        				System.out.print("Угадай букву: ");
+        				System.out.print("РЈРіР°РґР°Р№ Р±СѓРєРІСѓ: ");
         				choice = br.readLine();
         				game.guessLetter(choice);
         			}
@@ -44,7 +44,7 @@ public class Hangman {
         		
         	} 
         	
-        	System.out.print("До свидания!");
+        	System.out.print("Р”Рѕ СЃРІРёРґР°РЅРёСЏ!");
             
             
         } catch (Exception e) {
