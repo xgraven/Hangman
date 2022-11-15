@@ -33,9 +33,9 @@ public class MyGame {
 	}
 	
 	public void currentStatus() {
-		System.out.println("Слово: " + maskedWord + 
-				" Осталось попыток: " + Integer.toString(maxTries - count) + 
-				" Использованные буквы: " + getUsedLetters());
+		System.out.println("РЎР»РѕРІРѕ: " + maskedWord + 
+				" РћСЃС‚Р°Р»РѕСЃСЊ РїРѕРїС‹С‚РѕРє: " + Integer.toString(maxTries - count) + 
+				" РСЃРїРѕР»СЊР·РѕРІР°РЅРЅС‹Рµ Р±СѓРєРІС‹: " + getUsedLetters());
 	}
 	
 	public boolean endOfGame() {
@@ -43,10 +43,11 @@ public class MyGame {
 	}
 	
 	
+	
 	public void guessLetter(String s) {
 		usedLetters = usedLetters + s;
 		if (currentWord.contains(s)) {
-			System.out.println("Есть такая буква!");
+			System.out.println("Р•СЃС‚СЊ С‚Р°РєР°СЏ Р±СѓРєРІР°!");
 			for (int i = 0; i < currentWord.length(); i++)
 			{
 				if (getCurrentWord().charAt(i) == s.charAt(0) ) {
@@ -56,15 +57,15 @@ public class MyGame {
 			}
 			maskedWord = String.valueOf(word);
 			if (maskedWord.equalsIgnoreCase(currentWord)) {
-				System.out.println("Вы угадали слово! Это " + currentWord);
+				System.out.println("Р’С‹ СѓРіР°РґР°Р»Рё СЃР»РѕРІРѕ! Р­С‚Рѕ " + currentWord);
 			}
 			
 		}
 		else {
-			System.out.println("Мимо!");
+			System.out.println("РњРёРјРѕ!");
 			count++;
 			if (count == maxTries) {
-				System.out.println("Вы проиграли! Было загадано слово - " + currentWord);
+				System.out.println("Р’С‹ РїСЂРѕРёРіСЂР°Р»Рё! Р‘С‹Р»Рѕ Р·Р°РіР°РґР°РЅРѕ СЃР»РѕРІРѕ - " + currentWord);
 			}
 			
 		}
