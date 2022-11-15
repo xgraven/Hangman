@@ -45,6 +45,7 @@ public class MyGame {
 	
 	
 	public void guessLetter(String s) {
+		s = s.substring(0,  1);
 		usedLetters = usedLetters + s;
 		if (currentWord.contains(s)) {
 			System.out.println("Есть такая буква!");
